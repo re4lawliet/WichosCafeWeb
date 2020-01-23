@@ -11,9 +11,6 @@
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', 'Controller@inicio');
-=======
 Route::get('/', function () {
     return view('welcome');
     
@@ -26,4 +23,3 @@ Route::get('/homecaja', function () {
 Route::get('/homebarista', function () {
     return view('homebarista');
 });
->>>>>>> 68835420a7a5454a0a3cbe93df538ec1d8903f8b

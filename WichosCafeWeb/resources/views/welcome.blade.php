@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html>
-    <h1>Hola Mundo</h1>
-
-    <div id="test">
-    
-    </div>
-=======
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -112,5 +103,4 @@
             </div>
         </div>
     </body>
->>>>>>> 68835420a7a5454a0a3cbe93df538ec1d8903f8b
 </html>
