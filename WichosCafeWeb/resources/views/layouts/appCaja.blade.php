@@ -42,18 +42,17 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item"><a href="{{ url('/homes') }}" class="nav-link">Home Admin</a></li>
+                            <li class="nav-item"><a href="{{ url('/homecaja') }}" class="nav-link">Home Caja</a></li>
                             <!--<li class="nav-item"><a href="#" class="nav-link"></a></li>-->
                         </ul>
                         <li class="dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">
-                                Modulos Administrador <b class="caret"></b>
+                                Modulos Caja <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ url('/proyectos') }}" class="nav-link">Modulo de Proyectos</a></li>
-                                <li><a href="{{ url('/empresas') }}" class="nav-link">Modulo de Empresas</a></li>
-                                <li><a href="{{ url('/asignacion') }}" class="nav-link">Modulo Asignaciones</a></li>
-                                <li><a href="{{ url('/register2') }}" class="nav-link">Registrar Usuarios</a></li>
+                                <li><a href="{{ url('/proyectos') }}" class="nav-link">Modulo 1</a></li>
+                                <li><a href="{{ url('/empresas') }}" class="nav-link">Modulo 2</a></li>
+                                <li><a href="{{ url('/asignacion') }}" class="nav-link">Modulo 3</a></li>
                             </ul>
                         </li>
                     </ul>

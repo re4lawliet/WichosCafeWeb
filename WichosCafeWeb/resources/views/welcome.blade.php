@@ -88,7 +88,7 @@
                 
                 <div class="title m-b-md">
                     
-                    <img src="images/logoindex.png">
+                    <img src="images/logoinicio.png">
                     
                 </div>
 
