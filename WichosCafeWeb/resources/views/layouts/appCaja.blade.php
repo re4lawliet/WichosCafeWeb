@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- TITULO EDITABLE -->
     <!--title>@yield('title')</title-->
-    <title>Admin SUR</title>
+    <title>Caja Wichos</title>
     <!-- Bootstrap -->
     <!-- Scripts Antiguos -->
     <!--script src="{{ asset('js/app.js') }}" defer></script (ESTE ESCRIPT ES VIEJO PERO CAGA LAS TABLAS)-->
@@ -32,8 +32,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="\images\surlogo.png">
-                    <img src="\images\logologo.png">
+                    <img src="\images\logoCabeza.png">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -66,6 +65,11 @@
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 Rol:Caja  <span class="caret"></span>
                             </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            
+                                    <a class="dropdown-item" href="/" class="nav-link">Salir</a>
+                            </div>
+
                         </li>
                         
                     </ul>
