@@ -22,4 +22,8 @@ Route::get('/homecaja', function () {
 
 Route::get('/homebarista', function () {
     return view('homebarista');
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 9eb84525e22d503073e80e15a8a310a2d7a61fa9
