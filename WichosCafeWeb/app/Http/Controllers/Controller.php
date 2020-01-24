@@ -7,19 +7,40 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
+
+
 class Controller extends BaseController
 {
+
+    public static $listaPedidos = array();
+    public $cont = 0;
+
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function Caja(){
-        
+
+    public function inicio(){
+
+            return view('welcome');
+            
+    }
+    public static function Caja(){
             return view('homecaja');
     }
 
-    public function Barista(){
-        $str = "It is %a on %b %d, %Y, %X - Time zone: %Z";
-        $data = gmstrftime($str,time());
-        echo($data);
-        return view('homeBarista')->with('data',$str);
+    /*
+    public static function add(){
+        array_push(self::$listaPedidos,self::$cont);
+        self::$cont = self::$cont + 1;
+        error_log(self::$cont);
+        return redirect('/homecaja');
     }
+
+    public function Barista(){
+        array_push(self::$listaPedidos,"Insertado_X");
+        return view('homeBarista')->with('val',self::$listaPedidos);
+    }
+    */
+
+
+
 }

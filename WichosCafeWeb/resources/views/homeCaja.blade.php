@@ -19,10 +19,21 @@
                     <br>
                     <br>
                     <br><br><br> 
-
+                    <form id="hacer_frm" action="{{ url('/add') }}" method="POST" >
+                        {{ csrf_field() }}
+                        <input type="hidden" name="txt_codigo" id="txt_codigo" value="Pedido_X">
+                        <button name="btn_Pedido" id="btn_Pedido" form="hacer_frrm" type="submit" class="btn btn-primary" onclick="enviar()">Enviar Pedido</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    function enviar(){
+        document.forms["hacer_frm"].submit();
+    }
+</script>
