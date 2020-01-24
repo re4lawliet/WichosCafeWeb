@@ -10,4 +10,16 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function Caja(){
+        
+            return view('homecaja');
+    }
+
+    public function Barista(){
+        $str = "It is %a on %b %d, %Y, %X - Time zone: %Z";
+        $data = gmstrftime($str,time());
+        echo($data);
+        return view('homeBarista')->with('data',$str);
+    }
 }

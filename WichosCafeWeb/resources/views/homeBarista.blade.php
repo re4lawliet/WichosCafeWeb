@@ -2,6 +2,7 @@
 
 
 @section('content')
+<<<<<<< HEAD
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -38,56 +39,39 @@
         
         
         </h2></div>
+=======
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+</head>
+
+<div id="NO">
+<ul>
+<?php for($i=1;$i<=5;$i++){ ?>
+<li>Menu Item <?php echo $i; ?></li>
+<?php } ?>
+</ul>
+>>>>>>> 51e043f24f360dbe35c134cf6fddd3e3b13d8566
 </div>
 
-<br>
-                    @if (count($proyectos) > 0)
-            <div class="panel panel-default">
-                
-                <div class="panel-heading">
-                        <h2>Proyecto Seleccionado: "{{Session::get('proyectoGnombre', 'Seleccione Proyecto')}}"</h2>
-                </div>
-                <div class="panel-body">
-                    <table class="table table-striped task-table">
-                        <thead>
-                            <th>Nombre Proyecto</th>
-                            <th>Estado Proyecto</th>
-                            <th>Seleccionar</th>
-                            
-                            <th>&nbsp;</th>
-                        </thead>
-                        <tbody>
-                            @foreach ($proyectos as $emps)
-                                <tr>
-                                    <td class="table-text"><div>{{ $emps->nombre_proyecto }}</div></td>
-                                    <td class="table-text"><div>{{ $emps->estado_proyecto }}</div></td>
-                                    
-                                    
 
-                                    <!-- Task Delete Button -->
-                                    <td>
-                                        <button type="submit" class="btn btn-primary" onclick="location.href='proyectoG/{{ $emps->id }}/{{ $emps->nombre_proyecto }}'">
-                                            <i class="fa fa-btn fa-pencil"></i>Seleccionar
-                                        </button>
-
-                                    </td>
-                                
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                    {{ $proyectos->render() }}
-                </div>
-            </div>
-        </div>
-    @endif
-
-
-        Mi Proyecto: {{Session::get('proyectoGestado_proyecto', 'Seleccione Proyecto')}}
-
-                </div>
-            </div>
-        </div>
-    </div>
+<div id="links">
+<ul>
+<?php for($i=1;$i<=15;$i++){ ?>
+<li>Menu Item <?php echo $i; ?></li>
+<?php } ?>
+</ul>
+holis
 </div>
+<script type="text/javascript">
+   /*setTimeout(function(){
+       location.links.reload();
+   },1000);*/
+   $(document).ready(function () {
+    setInterval(function () {
+        $( "#links" ).load(window.location.href + " #links" );
+    }, 1000);
+});
+</script>
+
 @endsection
+

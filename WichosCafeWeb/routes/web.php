@@ -16,10 +16,12 @@ Route::get('/', function () {
     
 });
 
-Route::get('/homecaja', function () {
-    return view('homecaja');
-});
+Route::get('/homecaja', 'Controller@Caja');
 
-Route::get('/homebarista', function () {
-    return view('homebarista');
+Route::get('/homebarista', function(){
+    //$str = "It is %a on %b %d, %Y, %X - Time zone: %Z";
+        //echo(gmstrftime($str,time()));
+        //return view('homeBarista')->with('data',$str);
+    return view('homeBarista');
+    
 });

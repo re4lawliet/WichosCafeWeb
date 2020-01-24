@@ -70,7 +70,7 @@
             <div class="top-right links">
                 
                 <a href="/homecaja">Caja</a>
-                <a href="">Barista</a>
+                <a href="/homebarista">Barista</a>
                 
             </div>
 
