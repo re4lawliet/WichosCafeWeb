@@ -26,6 +26,25 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <style>
+        .grid-container {
+        display: grid;
+        grid-column-gap: 10px;
+        grid-template-columns: auto auto auto auto auto;
+       
+        }
+
+        .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        
+        }
+
+    </style>
+
+
 </head>
 <body>
     <div id="app">
