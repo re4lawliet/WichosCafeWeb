@@ -11,17 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-    
-});
+Route::get('/', 'Controller@inicio');
 
 Route::get('/homecaja', 'Controller@Caja');
 
-Route::get('/homebarista', function(){
-    //$str = "It is %a on %b %d, %Y, %X - Time zone: %Z";
-        //echo(gmstrftime($str,time()));
-        //return view('homeBarista')->with('data',$str);
-    return view('homeBarista');
-    
-});
+Route::get('/homebarista', 'Controller@Barista');
+
+Route::post('/add','Controller@add');
+
+
+
+
+
