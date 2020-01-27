@@ -8,16 +8,25 @@
         <div id="cont1">
                 <h5><center>
                     ORDEN:
-                    <label id="texto1" class="btn-outline-primary">X</label>
-                    <label id="texto2" class="btn-outline-success">X</label>
-                    <label id="texto3" class="btn-outline-info">X</label>
-                    <label id="texto4" class="btn-outline-dark">X</label>
-                    <label id="texto5" class="btn-outline-danger">X</label>
-                    <br>
-                    <button type="button" class="btn btn-success" onclick='alert("Orden Enviada")' width="100px">
-                        <i class="fa fa-btn fa-pencil"></i>Ordenar&nbsp;
-                    </button>
-                    <button type="button" class="btn btn-danger" onclick="location.reload()" width="100px">
+                    <form id="ordenar_frm" action="{{ url('/add') }}" method="post">
+                        {{ csrf_field() }}
+                        <label id="texto1" name="texto1" class="btn-outline-primary">X</label>
+                        <label id="texto2" class="btn-outline-success">X</label>
+                        <label id="texto3" class="btn-outline-info">X</label>
+                        <label id="texto4" class="btn-outline-dark">X</label>
+                        <label id="texto5" class="btn-outline-danger">X</label>
+                        <input id="txt1" name="txt1" type="hidden" value="X"></input>
+                        <input id="txt2" name="txt2" type="hidden" value="X"></input>
+                        <input id="txt3" name="txt3" type="hidden" value="X"></input>
+                        <input id="txt4" name="txt4" type="hidden" value="X"></input>
+                        <input id="txt5" name="txt5" type="hidden" value="X"></input>
+                        <br>
+                        <button type="button" class="btn btn-success" onclick="Enviar()" width="100px">
+                            <i class="fa fa-btn fa-pencil"></i>Ordenar&nbsp;
+                        </button>
+                    </form>
+                    
+                    <button type="button" class="btn btn-danger" onclick="Cancelar()" width="100px">
                         <i class="fa fa-btn fa-pencil"></i>Cancelar&nbsp;
                     </button>
                 </center></h5>
@@ -144,6 +153,23 @@
 @endsection
 
 <script>
+    //------------------------------------------------------Transaccion
+    function Enviar(){
+        document.getElementById('txt1').value = document.getElementById('texto1').innerHTML;
+        document.getElementById('txt2').value = document.getElementById('texto2').innerHTML;
+        document.getElementById('txt3').value = document.getElementById('texto3').innerHTML;
+        document.getElementById('txt4').value = document.getElementById('texto4').innerHTML;
+        document.getElementById('txt5').value = document.getElementById('texto5').innerHTML;
+        document.forms["ordenar_frm"].submit();
+    }
+
+    function Cancelar(){
+        document.getElementById('texto1').innerHTML = 'X';
+        document.getElementById('texto2').innerHTML = 'X';
+        document.getElementById('texto3').innerHTML = 'X';
+        document.getElementById('texto4').innerHTML = 'X';
+        document.getElementById('texto5').innerHTML = 'X';
+    }
     //------------------------------------------------------Bebida
     function agregarTxtCafe(){   
         document.getElementById('texto1').innerHTML = 'Cf';

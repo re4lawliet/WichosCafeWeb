@@ -18,3 +18,8 @@ Route::get('/homecaja', 'Controller@Caja');
 Route::get('/homebarista', 'Controller@Barista');
 
 Route::post('/add','Controller@add');
+
+
+
+
+
