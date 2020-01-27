@@ -14,7 +14,7 @@
                     <label id="texto4" class="btn-outline-dark">X</label>
                     <label id="texto5" class="btn-outline-danger">X</label>
                     <br>
-                    <button type="button" class="btn btn-success" onclick='alert("Orden Enviada")' width="100px">
+                    <button type="button" class="btn btn-success" onclick="CrearOrden()" width="100px">
                         <i class="fa fa-btn fa-pencil"></i>Ordenar&nbsp;
                     </button>
                     <button type="button" class="btn btn-danger" onclick="location.reload()" width="100px">
@@ -200,6 +200,20 @@
     } 
     function agregarTxtPequeño(){   
         document.getElementById('texto5').innerHTML = '-';
+    } 
+    //------------------------------------------------------Crear ORDEN
+    function CrearOrden(){   
+        var texto1=document.getElementById('texto1').innerHTML;
+        var texto2=document.getElementById('texto2').innerHTML;
+        var texto3=document.getElementById('texto3').innerHTML;
+        var texto4=document.getElementById('texto4').innerHTML;
+        var texto5=document.getElementById('texto5').innerHTML;
+
+        var Salida=texto1+texto2+texto3+texto4+texto5;
+
+        alert(Salida);
+        location.reload();
+
     } 
 
 </script>
