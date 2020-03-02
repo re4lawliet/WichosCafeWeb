@@ -19,6 +19,8 @@ Route::get('/homebarista', 'Controller@Barista');
 
 Route::post('/add','Controller@add');
 
+//------------------Eliminar de la Cola
+Route::get('/EliminarOrden/{id}', 'Controller@EliminarOrden');
 
 
 

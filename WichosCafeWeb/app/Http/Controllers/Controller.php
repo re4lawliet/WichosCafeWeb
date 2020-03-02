@@ -48,6 +48,23 @@ class Controller extends BaseController
         return back();
     }
 
+    public function EliminarOrden($id){
+        try{
+
+            
+            $delete = DB::delete("DELETE FROM pedido WHERE id=$id;");
+
+            $orden = DB::select("SELECT *
+                                    FROM pedido
+                                    WHERE estado = '0';");
+            return view('homeBarista')->with('ordenes',$orden);
+
+        }catch (Exception $e) { 
+            Session::flash('catch_error','Eliminar Orden');
+            return view('ErrorCatch');  
+        }
+    }
+
     /*
     
 
