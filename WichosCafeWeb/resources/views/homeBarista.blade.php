@@ -26,11 +26,12 @@
                     <!-- Encabezado de Tabla -->
                     <thead>
                         <th>ID</th>
-                        <th>Bebida</th>
-                        <th>Tipo</th>
-                        <th>Complemento</th>
-                        <th>Azucar</th>
                         <th>Tamaño</th>
+                        <th>Bebida</th>
+                        <th>Complemento</th>
+                        <th>Chai</th>
+                        <th>Tipo</th>
+                        <th>Azucar</th>        
                         <th>Accion</th>
                         
                     </thead>
@@ -39,11 +40,13 @@
                         @foreach($ordenes as $orden)
                         <tr>
                             <td class="table-text"><div><h5><label id="texto1" name="texto1" >{{ $orden->id }})</label></h5></div></td>
-                            <td class="table-text"><div><h3><label id="texto1" name="texto1" class="btn-outline-primary">{{ $orden->bebida }}</label></h3></div></td>
-                            <td class="table-text"><div><h3><label id="texto1" name="texto1" class="btn-outline-success">{{ $orden->tipo }}</label></h3></div></td>
-                            <td class="table-text"><div><h3><label id="texto1" name="texto1" class="btn-outline-info">{{ $orden->complemento }}</label></h3></div></td>
-                            <td class="table-text"><div><h3><label id="texto1" name="texto1" class="btn-outline-dark">{{ $orden->azucar }}</label></h3></div></td>
                             <td class="table-text"><div><h2><label id="texto1" name="texto1" class="btn-outline-danger">{{ $orden->tamano }}</label></h2></div></td>
+                            <td class="table-text"><div><h3><label id="texto1" name="texto1" class="btn-outline-primary">{{ $orden->bebida }}</label></h3></div></td>
+                            <td class="table-text"><div><h3><label id="texto1" name="texto1" class="btn-outline-info">{{ $orden->complemento }}</label></h3></div></td>
+                            <td class="table-text"><div><h3><label id="texto1" name="texto1" class="btn-outline-success">{{ $orden->chai }}</label></h3></div></td>
+                            <td class="table-text"><div><h3><label id="texto1" name="texto1" class="btn-outline-dark">{{ $orden->tipo }}</label></h3></div></td>
+                            <td class="table-text"><div><h3><label id="texto1" name="texto1" class="btn-outline-dark">{{ $orden->azucar }}</label></h3></div></td>
+                           
                             
                             <!-- Boton VER -->
                             <td>

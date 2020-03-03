@@ -38,13 +38,15 @@ class Controller extends BaseController
 
     public function add(){
         $bebida = $_POST['txt1'];
-        $tipo = $_POST['txt2'];
-        $complemento = $_POST['txt3'];
-        $azucar = $_POST['txt4'];
-        $tamano = $_POST['txt5'];
+        $complemento = $_POST['txt2'];
+        $chai = $_POST['txt3'];
+        $tipo = $_POST['txt4'];
+        $azucar = $_POST['txt5'];
+        $tamano = $_POST['txt6'];
+        
 
-        $insert = DB::insert("INSERT INTO pedido (bebida, tipo, complemento, azucar, tamano, estado)
-                            VALUES ('$bebida', '$tipo', '$complemento', '$azucar', '$tamano','0')");
+        $insert = DB::insert("INSERT INTO pedido (bebida, tipo, complemento, azucar, tamano, estado, chai)
+                            VALUES ('$bebida', '$tipo', '$complemento', '$azucar', '$tamano','0','$chai')");
         return back();
     }
 
