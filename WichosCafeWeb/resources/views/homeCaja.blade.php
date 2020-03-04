@@ -36,6 +36,9 @@
                         <button form="as" type="button" class="btn btn-danger" onclick="Cancelar()" width="100px">
                             <i class="fa fa-btn fa-pencil"></i>Cancelar&nbsp;
                         </button>
+                        <button form="as" type="button" class="btn btn-danger" onclick="Retroceso()" width="100px">
+                            <i class="fa fa-btn fa-pencil"></i>Retroceso&nbsp;
+                        </button>
                     </form>
                     
                     
@@ -93,7 +96,7 @@
                         <br>
                         <br>
                         <button type="button" class="btn btn-primary" onclick="agregarTxtFrape()">
-                            <i class="fa fa-btn fa-pencil"></i>Frape
+                            <i class="fa fa-btn fa-pencil"></i>Frape&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
@@ -113,22 +116,22 @@
                         <br>
                         <br>
                         <button type="button" class="btn btn-primary" onclick="agregarTxtGaseosa()">
-                            <i class="fa fa-btn fa-pencil"></i>Gaseosa
+                            <i class="fa fa-btn fa-pencil"></i>Gaseosa&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-primary" onclick="MostrarChai()">
-                            <i class="fa fa-btn fa-pencil"></i>Chai
+                            <i class="fa fa-btn fa-pencil"></i>Chai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-primary" onclick="agregarTxtLatte()">
-                            <i class="fa fa-btn fa-pencil"></i>Latte
+                            <i class="fa fa-btn fa-pencil"></i>Latte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-primary" onclick="agregarTxtMatcha()">
-                            <i class="fa fa-btn fa-pencil"></i>Matcha
+                            <i class="fa fa-btn fa-pencil"></i>Matcha&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                     </td>
 
@@ -226,27 +229,32 @@
                     <!-- ********************************************************* -->
                     <td>
                         <button type="button" class="btn btn-info" onclick="agregarTxtNegro()">
-                            <i class="fa fa-btn fa-pencil"></i>Negro&nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-btn fa-pencil"></i>Negro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-info" onclick="agregarTxtCremora()">
-                            <i class="fa fa-btn fa-pencil"></i>Cremora
+                            <i class="fa fa-btn fa-pencil"></i>Cremora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-info" onclick="agregarTxtVainilla()">
-                            <i class="fa fa-btn fa-pencil"></i>Vainilla
+                            <i class="fa fa-btn fa-pencil"></i>Vainilla&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-info" onclick="agregarTxtExpreso()">
-                            <i class="fa fa-btn fa-pencil"></i>Expreso
+                            <i class="fa fa-btn fa-pencil"></i>Expreso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-info" onclick="agregarTxtLecheEntera()">
-                            <i class="fa fa-btn fa-pencil"></i>Leche Entera
+                            <i class="fa fa-btn fa-pencil"></i>Leche Entera&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
                         </button>
                         <br>
                         <br>
@@ -256,22 +264,25 @@
                         <br>
                         <br>
                         <button type="button" class="btn btn-info" onclick="agregarTxtLecheDescremada()">
-                            <i class="fa fa-btn fa-pencil"></i>Leche Descremada
+                            <i class="fa fa-btn fa-pencil"></i>Leche Descremada&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-info" onclick="agregarTxtLecheSoya()">
-                            <i class="fa fa-btn fa-pencil"></i>Leche Soya
+                            <i class="fa fa-btn fa-pencil"></i>Leche Soya&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-info" onclick="agregarTxtBlanco()">
-                            <i class="fa fa-btn fa-pencil"></i>Blanco
+                            <i class="fa fa-btn fa-pencil"></i>Blanco&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
                         <button type="button" class="btn btn-info" onclick="agregarTxtCookies()">
-                            <i class="fa fa-btn fa-pencil"></i>Cookies
+                            <i class="fa fa-btn fa-pencil"></i>Cookies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
@@ -360,7 +371,7 @@
                         <br>
                         <br>
                         <button type="button" class="btn btn-warning" onclick="agregarTxtIce()">
-                            <i class="fa fa-btn fa-pencil"></i>ICE&nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-btn fa-pencil"></i>ICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </button>
                         <br>
                         <br>
@@ -393,6 +404,31 @@
         document.getElementById('texto4').innerHTML = '';
         document.getElementById('texto5').innerHTML = '';
         document.getElementById('texto6').innerHTML = '';
+        
+    }
+    function Retroceso(){
+
+        var texto1=document.getElementById('texto1').innerHTML;
+        var texto2=document.getElementById('texto2').innerHTML;
+        var texto3=document.getElementById('texto3').innerHTML;
+        var texto4=document.getElementById('texto4').innerHTML;
+        var texto5=document.getElementById('texto5').innerHTML;
+        var texto6=document.getElementById('texto6').innerHTML;
+
+        if(texto6!=""){
+            document.getElementById('texto6').innerHTML = '';
+        }else if(texto5!=""){
+            document.getElementById('texto5').innerHTML = '';
+        }else if(texto4!=""){
+            document.getElementById('texto4').innerHTML = '';
+        }else if(texto3!=""){
+            document.getElementById('texto3').innerHTML = '';
+        }else if(texto2!=""){
+            document.getElementById('texto2').innerHTML = '';
+        }else if(texto1!=""){
+            document.getElementById('texto1').innerHTML = '';
+        }
+        
     }
     //------------------------------------------------------Bebida
     function agregarTxtCafe(){   

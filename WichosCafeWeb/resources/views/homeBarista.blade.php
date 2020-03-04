@@ -70,7 +70,7 @@
        $(document).ready(function () {
         setInterval(function () {
             $( "#divPedidos" ).load(window.location.href + " #divPedidos" );
-        }, 100);
+        }, 1000);
     });
 </script>
 
