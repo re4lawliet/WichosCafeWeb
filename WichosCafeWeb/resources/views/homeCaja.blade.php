@@ -10,13 +10,15 @@
                     ORDEN:
                     <form id="ordenar_frm" action="{{ url('/add') }}" method="post">
                         {{ csrf_field() }}
+                        <!-- ********************************************************* -->
+                        <!-- ********** VISTA DE LA ORDEN Y VALORES OCULTOS ********** -->
+                        <!-- ********************************************************* -->
                         <label id="texto6" class="btn-outline-danger"></label>
                         <label id="texto1" name="texto1" class="btn-outline-primary"></label>
                         <label id="texto2" class="btn-outline-info"></label>
                         <label id="texto3" class="btn-outline-success"></label>
                         <label id="texto4" class="btn-outline-dark"></label>
                         <label id="texto5" class="btn-outline-dark"></label>
-                        
                         <input id="txt6" name="txt6" type="hidden" value=""></input>
                         <input id="txt1" name="txt1" type="hidden" value=""></input>
                         <input id="txt2" name="txt2" type="hidden" value=""></input>
@@ -24,6 +26,9 @@
                         <input id="txt4" name="txt4" type="hidden" value=""></input>
                         <input id="txt5" name="txt5" type="hidden" value=""></input>
                         
+                        <!-- ********************************************************* -->
+                        <!-- ************* BOTONES DE ACEPTAR Y CANCELAR ************* -->
+                        <!-- ********************************************************* -->
                         <br>
                         <button type="button" class="btn btn-success" onclick="Enviar()" width="100px">
                             <i class="fa fa-btn fa-pencil"></i>Ordenar&nbsp;
@@ -38,22 +43,34 @@
                 
         </div>
 
-
+        <!-- ********************************************************* -->
+        <!-- ****************** INICIO DE LA TABLA ******************* -->
+        <!-- ********************************************************* -->
         <table id="solicitudes_director" class="table table-striped task-table">
             
+
+            <!-- ********************************************************* -->
+            <!-- ********************** ENCABEZADOS ********************** -->
+            <!-- ********************************************************* -->
             <thead>
                 <th>Bebida</th>
                 <th id="thChai" style="display:none">Chai</th>
+                <th id="thInfusion" style="display:none">Infusion</th>
                 <th>Complemento</th>
                 <th>Tipo</th>
                 <th>Azucar</th>
                 <th>Tamaño</th>
-                
             </thead>    
 
+
+            <!-- ********************************************************* -->
+            <!-- ************************ CUERPO  ************************ -->
+            <!-- ********************************************************* -->
             <tbody>
-                
                 <tr>
+                    <!-- ********************************************************* -->
+                    <!-- ************************ BEBIDAS ************************ -->
+                    <!-- ********************************************************* -->
                     <td>
                         <button type="button" class="btn btn-primary" onclick="agregarTxtCafe()" width="100px">
                             <i class="fa fa-btn fa-pencil"></i>Cafe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -80,8 +97,8 @@
                         </button>
                         <br>
                         <br>
-                        <button type="button" class="btn btn-primary" onclick="agregarTxtInfucion()">
-                            <i class="fa fa-btn fa-pencil"></i>Infucion
+                        <button type="button" class="btn btn-primary" onclick="MostrarInfusion()">
+                            <i class="fa fa-btn fa-pencil"></i>Infusion
                         </button>
                         <br>
                         <br>
@@ -114,6 +131,11 @@
                             <i class="fa fa-btn fa-pencil"></i>Matcha
                         </button>
                     </td>
+
+
+                    <!-- ********************************************************* -->
+                    <!-- ******************** CHAI ESCONDIDO ********************* -->
+                    <!-- ********************************************************* -->
                     <td id="tdChai" style="display:none">
                         <button type="button" class="btn btn-success" onclick="agregarTxtFlamingo()">
                             <i class="fa fa-btn fa-pencil"></i>Flamingo&nbsp;
@@ -154,6 +176,54 @@
                             <i class="fa fa-btn fa-pencil"></i>Tucan&nbsp;
                         </button>
                     </td>
+
+                    <!-- ********************************************************* -->
+                    <!-- ****************** INFUSION ESCONDIDO ******************* -->
+                    <!-- ********************************************************* -->
+                    <td id="tdInfusion" style="display:none">
+                        <button type="button" class="btn btn-secondary" onclick="agregarTxtBoraBora()">
+                            <i class="fa fa-btn fa-pencil"></i>BoraBora&nbsp;
+                        </button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-secondary" onclick="agregarTxtNube()">
+                            <i class="fa fa-btn fa-pencil"></i>La Nube&nbsp;
+                        </button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-secondary" onclick="agregarTxtMenta()">
+                            <i class="fa fa-btn fa-pencil"></i>Menta Verde&nbsp;
+                        </button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-secondary" onclick="agregarTxtVainillaC()">
+                            <i class="fa fa-btn fa-pencil"></i>Vainilla Cereza&nbsp;
+                        </button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-secondary" onclick="agregarTxtAmareto()">
+                            <i class="fa fa-btn fa-pencil"></i>Amareto Manzana&nbsp;
+                        </button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-secondary" onclick="agregarTxtOrganico()">
+                            <i class="fa fa-btn fa-pencil"></i>Organico&nbsp;
+                        </button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-secondary" onclick="agregarTxtLemon()">
+                            <i class="fa fa-btn fa-pencil"></i>Lemon Ginger&nbsp;
+                        </button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-secondary" onclick="agregarTxtMarroco()">
+                            <i class="fa fa-btn fa-pencil"></i>Marroco&nbsp;
+                        </button>
+                    </td>
+
+                    <!-- ********************************************************* -->
+                    <!-- ********************** COMPLEMENTO ********************** -->
+                    <!-- ********************************************************* -->
                     <td>
                         <button type="button" class="btn btn-info" onclick="agregarTxtNegro()">
                             <i class="fa fa-btn fa-pencil"></i>Negro&nbsp;&nbsp;&nbsp;
@@ -205,8 +275,12 @@
                         </button>
                         <br>
                         <br>
-                        
                     </td>
+
+
+                    <!-- ********************************************************* -->
+                    <!-- ************************** TIPO ************************* -->
+                    <!-- ********************************************************* -->
                     <td>
                         <button type="button" class="btn btn-light" onclick="agregarTxtFuerte()">
                             <i class="fa fa-btn fa-pencil"></i>Fuerte&nbsp;
@@ -223,48 +297,26 @@
                         </button>
                         <br>
                         <br>
-                        <button type="button" class="btn btn-secondary" onclick="agregarTxtBoraBora()">
-                            <i class="fa fa-btn fa-pencil"></i>BoraBora&nbsp;
-                        </button>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-secondary" onclick="agregarTxtNube()">
-                            <i class="fa fa-btn fa-pencil"></i>La Nube&nbsp;
-                        </button>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-secondary" onclick="agregarTxtMenta()">
-                            <i class="fa fa-btn fa-pencil"></i>Menta Verde&nbsp;
-                        </button>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-secondary" onclick="agregarTxtVainillaC()">
-                            <i class="fa fa-btn fa-pencil"></i>Vainilla Cereza&nbsp;
-                        </button>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-secondary" onclick="agregarTxtAmareto()">
-                            <i class="fa fa-btn fa-pencil"></i>Amareto Manzana&nbsp;
-                        </button>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-secondary" onclick="agregarTxtOrganico()">
-                            <i class="fa fa-btn fa-pencil"></i>Organico&nbsp;
-                        </button>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-secondary" onclick="agregarTxtLemon()">
-                            <i class="fa fa-btn fa-pencil"></i>Lemon Ginger&nbsp;
-                        </button>
-                        <br>
-                        <br>
-                        <button type="button" class="btn btn-secondary" onclick="agregarTxtMarroco()">
-                            <i class="fa fa-btn fa-pencil"></i>Marroco&nbsp;
-                        </button>
-                        
-                        
                     </td>
+
+                    <!-- ********************************************************* -->
+                    <!-- ************************* AZUCAR ************************ -->
+                    <!-- ********************************************************* -->
                     <td>
+                        <button type="button" class="btn btn-light" onclick="agregarTxtEsplenda()">
+                            <i class="fa fa-btn fa-pencil"></i>Esplenda&nbsp;&nbsp;&nbsp;
+                        </button>
+                        <br>
+                        <br><button type="button" class="btn btn-light" onclick="agregarTxtMorena()">
+                            <i class="fa fa-btn fa-pencil"></i>Morena&nbsp;&nbsp;&nbsp;
+                        </button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-light" onclick="agregarTxtMedia()">
+                            <i class="fa fa-btn fa-pencil"></i>Agregar 1/2&nbsp;&nbsp;&nbsp;
+                        </button>
+                        <br>
+                        <br>
                         <button type="button" class="btn btn-light" onclick="agregarTxtUno()">
                             <i class="fa fa-btn fa-pencil"></i>1&nbsp;&nbsp;&nbsp;
                         </button>
@@ -291,6 +343,11 @@
                         <br>
                         <br>
                     </td>
+
+
+                    <!-- ********************************************************* -->
+                    <!-- ************************ TAMANIO ************************ -->
+                    <!-- ********************************************************* -->
                     <td>
                         <button type="button" class="btn btn-warning" onclick="agregarTxtPequeño()">
                             <i class="fa fa-btn fa-pencil"></i>Normal&nbsp;&nbsp;&nbsp;
@@ -364,23 +421,6 @@
     }   
     function agregarTxtGaseosa(){   
         document.getElementById('texto1').innerHTML = 'Gase';
-    }   
-    function MostrarChai(){   
-        agregarTxtChai(); 
-        var y = document.getElementById("thChai");
-        var x = document.getElementById("tdChai");    
-        if (y.style.display === "none") {
-            y.style.display = "block";
-            x.style.display = "block";
-        }
-    } 
-    function ocultarChai() {
-        var y = document.getElementById("thChai");
-        var x = document.getElementById("tdChai");
-        if (y.style.display === "block") {
-            x.style.display = "none";
-            y.style.display = "none";
-        }
     }
     function agregarTxtChai(){   
         document.getElementById('texto1').innerHTML = 'Chai';
@@ -391,6 +431,8 @@
     function agregarTxtMatcha(){   
         document.getElementById('texto1').innerHTML = 'Matc';
     }   
+
+
     //------------------------------------------------------Complemento
     function agregarTxtNegro(){   
         document.getElementById('texto2').innerHTML = 'Neg';
@@ -422,6 +464,9 @@
     function agregarTxtCookies(){   
         document.getElementById('texto2').innerHTML = 'Cook';
     }  
+
+
+
     //------------------------------------------------------Chai
     function agregarTxtFlamingo(){  
         document.getElementById('texto3').innerHTML = 'Flam';
@@ -455,6 +500,9 @@
         document.getElementById('texto3').innerHTML = 'Tuca';
         ocultarChai();
     } 
+
+
+
     //------------------------------------------------------Tipo Bebida
     function agregarTxtFuerte(){   
         document.getElementById('texto4').innerHTML = 'Fuer';
@@ -465,46 +513,73 @@
     function agregarTxtNormal(){   
         document.getElementById('texto4').innerHTML = 'Norm';
     } 
+
+    //------------------------------------------------------Infusion
     function agregarTxtBoraBora(){   
         document.getElementById('texto4').innerHTML = 'BrBr';
+        ocultarInfusion();
     } 
     function agregarTxtNube(){   
         document.getElementById('texto4').innerHTML = 'Nube';
+        ocultarInfusion();
     } 
     function agregarTxtMenta(){   
         document.getElementById('texto4').innerHTML = 'MeVe';
+        ocultarInfusion();
     } 
     function agregarTxtVainillaC(){   
         document.getElementById('texto4').innerHTML = 'VaCe';
+        ocultarInfusion();
     } 
     function agregarTxtAmareto(){   
         document.getElementById('texto4').innerHTML = 'Amar';
+        ocultarInfusion();
     } 
     function agregarTxtOrganico(){   
         document.getElementById('texto4').innerHTML = 'Orga';
+        ocultarInfusion();
     } 
     function agregarTxtLemon(){   
         document.getElementById('texto4').innerHTML = 'LemonGi';
+        ocultarInfusion();
     } 
     function agregarTxtMarroco(){   
         document.getElementById('texto4').innerHTML = 'Mrco';
+        ocultarInfusion();
     } 
-    //------------------------------------------------------Azucar          
+
+
+
+    //------------------------------------------------------Azucar   
+    function agregarTxtEsplenda(){
+        document.getElementById('texto5').innerHTML = document.getElementById('texto5').innerHTML + ' Esp';
+    }   
+    function agregarTxtMorena(){
+        document.getElementById('texto5').innerHTML = document.getElementById('texto5').innerHTML + ' Mor';
+    }    
     function agregarTxtUno(){   
-        document.getElementById('texto5').innerHTML = '1az';
+        document.getElementById('texto5').innerHTML = document.getElementById('texto5').innerHTML + ' 1az';
     } 
     function agregarTxtDos(){   
-        document.getElementById('texto5').innerHTML = '2az';
+        document.getElementById('texto5').innerHTML = document.getElementById('texto5').innerHTML + ' 2az';
     }   
     function agregarTxtTres(){   
-        document.getElementById('texto5').innerHTML = '3az';
+        document.getElementById('texto5').innerHTML = document.getElementById('texto5').innerHTML + ' 3az';
     }  
     function agregarTxtCuatro(){   
-        document.getElementById('texto5').innerHTML = '4az';
+        document.getElementById('texto5').innerHTML = document.getElementById('texto5').innerHTML + ' 4az';
     }  
-    function agregarTxtSinAzucar(){   
-        document.getElementById('texto5').innerHTML = '0az';
+    function agregarTxtMedia(){ 
+        var str = document.getElementById('texto5').innerHTML;
+        var res = str.replace("az", " + ");
+        document.getElementById('texto5').innerHTML = res + ' 1/2az';
     } 
+    function agregarTxtSinAzucar(){   
+        document.getElementById('texto5').innerHTML = document.getElementById('texto5').innerHTML + ' 0az';
+    } 
+
+
+
     //------------------------------------------------------Tamaño 
     function agregarTxtGrande(){   
         document.getElementById('texto6').innerHTML = 'Grd';
@@ -515,6 +590,8 @@
     function agregarTxtIce(){   
         document.getElementById('texto6').innerHTML = 'Ice';
     } 
+
+
     //------------------------------------------------------Crear ORDEN
     function CrearOrden(){   
         var texto1=document.getElementById('texto1').innerHTML;
@@ -528,7 +605,46 @@
 
         alert(Salida);
         location.reload();
-
     } 
+
+
+    //-------------------------------------------------------Funciones EXTRA
+       
+    function MostrarChai(){   
+        agregarTxtChai(); 
+        var y = document.getElementById("thChai");
+        var x = document.getElementById("tdChai");    
+        if (y.style.display === "none") {
+            y.style.display = "block";
+            x.style.display = "block";
+        }
+        ocultarInfusion();
+    } 
+    function ocultarChai() {
+        var y = document.getElementById("thChai");
+        var x = document.getElementById("tdChai");
+        if (y.style.display === "block") {
+            x.style.display = "none";
+            y.style.display = "none";
+        }
+    }
+    function MostrarInfusion(){   
+        agregarTxtInfucion();
+        var y = document.getElementById("thInfusion");
+        var x = document.getElementById("tdInfusion");    
+        if (y.style.display === "none") {
+            y.style.display = "block";
+            x.style.display = "block";
+        }
+        ocultarChai();
+    } 
+    function ocultarInfusion() {
+        var y = document.getElementById("thInfusion");
+        var x = document.getElementById("tdInfusion");
+        if (y.style.display === "block") {
+            x.style.display = "none";
+            y.style.display = "none";
+        }
+    }
 
 </script>
